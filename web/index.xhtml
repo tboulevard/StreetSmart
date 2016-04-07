@@ -4,17 +4,19 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <head>
         <title>StreetSmart</title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
         <meta name="viewport" content="width = 600"/>
         <meta charset="utf-8"/>
         <link rel="shortcut icon" type="image/x-icon" href="resources/images/favicon.ico"/>
         <link rel="stylesheet" type="text/css" href="resources/css/global.css"/>
         <link rel="stylesheet" type="text/css" href="resources/css/index.css"/>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script type="text/javascript" src="resources/js/jQueryRotate.js"></script>
         <script type="text/javascript" src="resources/js/global.js"></script>
         <script type="text/javascript" src="resources/js/index.js"></script>
     </head>
     <body>
-        <!-- HEADER -->
+        <!-- HEADER11 -->
         <div id="header-wrapper">
             <a style="border: none" href="#"><img id="ss-logo" src="resources/images/logo.png" alt="StreetSmart Logo"/></a>
             <img id="ss-name" src="resources/images/streetsmart.png" alt="StreetSmart"/>
@@ -32,7 +34,7 @@
                 <img id="map-menu-pic" src="" alt="Pin Picture"/>
                 <div id="map-menu-message"></div>
             </div>
-            
+
             <!-- Map overlays (ordered from highest z-index to lowest) -->
             <div id="map-loading"></div>
             <div id="map-transparent-overlay"></div>
@@ -42,10 +44,10 @@
             <div id="map-message-wrapper">
                 <div id="map-message"></div> <!-- Gets centered inside parent -->
             </div>
-            
+
             <!-- Map -->
             <div id="map"></div>
-            
+
             <!-- Map js -->
             <script type="text/javascript" src="resources/js/map.js"></script>
             <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUFqUfsRLDfd4kVe4wYkACPu9Aswm0AT0&amp;callback=initialize" async="async" defer="defer"></script>
@@ -63,5 +65,11 @@
                 BetterU&nbsp;&copy;&nbsp;2016&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="mailto:feedback@betteru.com">Feedback</a>
             </div>
         </div>
+        <br />
+        <h:link outcome="/pin/List" value="Show All Pin Items"/>
+        <br />
+        <h:link outcome="/user/List" value="Show All User Items"/>
     </body>
+
+
 </html>

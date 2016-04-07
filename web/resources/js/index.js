@@ -9,6 +9,27 @@ $(document).ready(function () {
         $("#add-poi").toggle();
     });
 
+    // Rotate + to be x to signal that clicking it again will cancel
+    $("#add-pin-button").rotate({
+        bind: {
+            click: function () {
+                if ($("#map-transparent-overlay").css("display") === "none") {
+                    $(this).rotate({
+                        angle: 45,
+                        animateTo: 0,
+                        duration: 100
+                    });
+                } else {
+                    $(this).rotate({
+                        angle: 0,
+                        animateTo: 45,
+                        duration: 100
+                    });
+                }
+            }
+        }
+    });
+
     // Close menu
     $("#map-menu-close").bind("click", function (e) {
         $("#map-menu").removeClass("open");
